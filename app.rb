@@ -8,7 +8,7 @@ class IdeaBoxApp < Sinatra::Base
 
 
   get '/' do
-    erb :index
+    erb :index, locals: {ideas: Idea.all}
   end
 
   not_found do
