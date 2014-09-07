@@ -1,4 +1,6 @@
 require 'idea_box'
+require 'sinatra/assetpack'
+
 
 class IdeaBoxApp < Sinatra::Base
 
