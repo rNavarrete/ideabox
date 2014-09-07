@@ -1,8 +1,8 @@
 ---
 ideas:
-- title: app
-  description: "kdot section 80 babies\r\n"
-- title: uno dos tres
-  description: cuatro cinco seis
-- title: 1, 2
-  description: 3, 4
+- title: test
+  description: "hello\r\n"
+  rank: 12
+- title: hola
+  description: como estan?
+  rank: 13
