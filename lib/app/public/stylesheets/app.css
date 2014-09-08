@@ -364,7 +364,11 @@ html, body {
 
 body {
   background: transparent;
-  background-image: url("/images/3.jpg");
+  background-image: url("/images/9.jpg");
+
+
+
+
   top right no-repeat;
   background-attachment: fixed;
 
@@ -1602,7 +1606,7 @@ button, .button {
   padding-bottom: 1.0625rem;
   padding-left: 2rem;
   font-size: 1rem;
-  background-color: #008CBA;
+  background-color: #f7667a;
   border-color: #007295;
   color: #FFFFFF;
   transition: background-color 300ms ease-out; }
@@ -4969,7 +4973,8 @@ meta.foundation-mq-topbar {
     .top-bar .toggle-topbar {
       display: none; }
     .top-bar .title-area {
-      float: left; }
+      /*float: left; }*/
+      text-align: center;
     .top-bar .name h1 a {
       width: auto; }
     .top-bar input, .top-bar .button, .top-bar button {
