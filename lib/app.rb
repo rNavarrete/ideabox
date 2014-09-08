@@ -3,15 +3,41 @@ require 'sinatra/assetpack'
 
 
 class IdeaBoxApp < Sinatra::Base
+  register Sinatra::AssetPack
 
   set :method_override, true
-  set :root, 'lib/app'
+  set :root, 'lib/app/'
 
 
   configure :development do
     register Sinatra::Reloader
   end
 
+  get '/stylesheets/:name.css' do
+  content_type 'text/css', :charset => 'utf-8'
+  sass(:"stylesheets/#{params[:name]}", Compass.sass_engine_options )
+end
+
+
+  assets do
+    serve '/js', from: 'js'
+    serve '/bower_components', from: 'bower_components'
+
+    js :modernizr, [
+      '/bower_components/modernizr/modernizr.js',
+    ]
+
+    js :libs, [
+      '/bower_components/jquery/dist/jquery.js',
+      '/bower_components/foundation/js/foundation.js'
+    ]
+
+    js :application, [
+      '/js/app.js'
+    ]
+
+    js_compression :jsmin
+  end
 
   get '/' do
     erb :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
