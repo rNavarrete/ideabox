@@ -1,7 +1,12 @@
+
+
+
+
+
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="#">My Site</a></h1>
+      <h1><a href="#">idea box</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -30,35 +35,34 @@
 
 
 
+<h3color style="color:white; font-weight: 100; font-size: -webkit-xxx-large;">Have a Great Idea?</h3>
+<h4>Share it here</h4>
 
 
 
 
-
-
-
-<h1>IdeaBox!!</h1>
 <form action="/" method="POST">
-  <p>
-    Your Idea:
-  </p>
-  <input type="text" name='idea[title]' /><br/><br/>
+  <div class="row">
+    <div class="large-12 columns">
+      <input type="text" name='idea[title]' /><br/><br/>
+    <div>
+  <div>
   <textarea name='idea[description]'></textarea><br/>
-  <input type="submit" />
+  <input type="submit" class="button round"/>
 </form>
 <h3> Existing Ideas</h3>
 <ul>
   <% ideas.each do |idea| %>
     <li>
       <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-        <input type='submit' value="+"/>
+        <input type='submit' value="+" class="button tiny round"/>
       </form>
       <%= idea.title %> (<%= idea.id %>) <br/>
       <%= idea.description %>
       <a href="/<%= idea.id %>/edit">Edit</a>
       <form action="/<%= idea.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
-        <input type="submit"value="delete" />
+        <input type="submit"value="delete" class="button alert tiny round" />
       </form>
     </li>
   <% end %>
