@@ -6622,11 +6622,21 @@ th.hide-for-touch {
 }
 
 #submit-button{
-  border: solid #ffffff;
-  background: rgba(58, 100, 132, .7);
+  border: solid hotpink;
+  background: rgba(224, 230, 230, .6);
   font-size: 25px;
   padding-top: 5px;
   padding-bottom: 4px;
   padding-left: 27px;
   padding-right: 26px;
+  margin-right: 452px;
+  border-radius: 50%;
+  height: 77px;
+  width:82px;
+}
+
+.top-bar{
+  border-bottom-style: solid;
+  border-bottom-color: #ffffff;
+  background: rgba(224, 230, 230, .6);
 }

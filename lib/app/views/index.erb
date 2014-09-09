@@ -3,11 +3,10 @@
 
 
 
-<nav class="top-bar" data-topbar role="navigation" style="border-bottom-style: solid;
-border-bottom-color: #fe4362; background: rgba(232, 210, 234, .4);">
+<nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-      <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #f7667a;">idea box</a></h1>
+      <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #519695;">idea box</a></h1>
     </li>
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -47,10 +46,28 @@ border-bottom-color: #fe4362; background: rgba(232, 210, 234, .4);">
   <div>
   <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;"></textarea><br/>
 <button type="submit" class="button radius right" id="submit-button" value="save">
-                <i class="fa fa-lightbulb-o fa-3"></i>
+                <i style="color:#519695;"class="fa fa-lightbulb-o fa-3">+</i>
 </button>
 </form>
-<h3> Existing Ideas </h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 style="padding-top:2000px;"> Existing Ideas </h3>
 <ul>
   <% ideas.each do |idea| %>
     <li>
