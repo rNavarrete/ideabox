@@ -364,7 +364,7 @@ html, body {
 
 body {
   background: transparent;
-  background-image: url("/images/9.jpg");
+  background-image: url("/images/13.jpg");
 
 
 
@@ -4694,7 +4694,7 @@ meta.foundation-mq-topbar {
   height: 48px;
   line-height: 45px;
   position: relative;
-  background: #333333;
+  background: rgba(58, 110, 132, .7);
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -4963,7 +4963,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width:40.063em) {
   .top-bar {
-    background: #333333;
+    background-color: rgba(255, 255, 255, 0.15);
     overflow: visible; }
     .top-bar:before, .top-bar:after {
       content: " ";
@@ -6602,4 +6602,31 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important;
   }
+}
+
+#text-field{
+  /*opacity: .79;*/
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px;
+  border-color: white;
+  color: white;
+}
+
+#text-description{
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: solid 2px;
+  border-color: white;
+  color: white;
+}
+
+#submit-button{
+  border: solid #ffffff;
+  background: rgba(58, 100, 132, .7);
+  font-size: 25px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  padding-left: 27px;
+  padding-right: 26px;
 }

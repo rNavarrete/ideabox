@@ -4,7 +4,7 @@
 
 
 <nav class="top-bar" data-topbar role="navigation" style="border-bottom-style: solid;
-border-bottom-color: #fe4362;">
+border-bottom-color: #fe4362; background: rgba(232, 210, 234, .4);">
   <ul class="title-area">
     <li class="name">
       <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #f7667a;">idea box</a></h1>
@@ -33,20 +33,21 @@ border-bottom-color: #fe4362;">
 
 
 
-<h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">Have a Great Idea?</h3>
-
+<h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">what's on your mind?</h3>
+<!-- <h4 class="subheader" style="color: white; font-weight: 100; text-align: center;">Share it here</h4>
+ -->
 
 
 
 <form action="/" method="POST">
   <div class="row">
     <div class="large-12 columns">
-      <input type="text" name='idea[title]' /><br/><br/>
+      <input type="text" id="text-field" name='idea[title]' placeholder="title" style="border-radius: 25px;"/><br/><br/>
     <div>
   <div>
-  <textarea name='idea[description]'></textarea><br/>
-<button type="submit" class="btn btn-success">
-                <i class="fa fa-heart"></i>
+  <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;"></textarea><br/>
+<button type="submit" class="button radius right" id="submit-button" value="save">
+                <i class="fa fa-lightbulb-o fa-3"></i>
 </button>
 </form>
 <h3> Existing Ideas </h3>
