@@ -4689,9 +4689,9 @@ meta.foundation-mq-topbar {
       margin-top: 45px; }
 
 .top-bar {
-  opacity: 0.76;
+  opacity: 0.79;
   overflow: hidden;
-  height: 45px;
+  height: 48px;
   line-height: 45px;
   position: relative;
   background: #333333;
