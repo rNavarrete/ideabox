@@ -11,22 +11,6 @@
      <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
-<!--   <section class="top-bar-section">
-    <ul class="right">
-      <li class="active"><a href="#">Right Button Active</a></li>
-      <li class="has-dropdown">
-        <a href="#">Right Button Dropdown</a>
-        <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
-          <li class="active"><a href="#">Active link in dropdown</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <ul class="left">
-      <li><a href="#">Left Nav Button</a></li>
-    </ul>
-  </section> -->
 </nav>
 
 
@@ -51,12 +35,13 @@
   <div class="row">
     <div class="large-12 columns">
       <input type="text" id="text-field" name='idea[title]' placeholder="title" style="border-radius: 25px;"/><br/><br/>
-    <div>
-  <div>
-  <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;"></textarea><br/>
-<button type="submit" class="button radius right" id="submit-button" value="save">
-                <i id="buttontext" class="fa fa-star fa-6"></i>
-</button>
+      <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;"></textarea><br/>
+      <div id="buttons">
+      <button type="submit" class="button radius right" id="submit-button" value="save"><i id="buttontext" class="fa fa-star fa-6"></i></button>
+      <a id="simple-menu" href="#sidr" class="button radius right"><i style="padding-top: 15px;"id="buttontext" class="fa fa-lightbulb-o"></i></a>
+      </div>
+    </div>
+  </div>
 </form>
 
 
@@ -66,8 +51,6 @@
 
 
 
-
-<a id="simple-menu" href="#sidr">view ideas</a>
 
 <div id="sidr">
   <!-- Your content -->
