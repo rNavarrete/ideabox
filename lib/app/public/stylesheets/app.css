@@ -6622,21 +6622,33 @@ th.hide-for-touch {
 }
 
 #submit-button{
-  border: solid hotpink;
-  background: rgba(224, 230, 230, .6);
-  font-size: 25px;
-  padding-top: 5px;
-  padding-bottom: 4px;
-  padding-left: 27px;
-  padding-right: 26px;
-  margin-right: 452px;
-  border-radius: 50%;
-  height: 77px;
-  width:82px;
+  border: solid #519695;
+/*background-image: url("/images/coolsun.jpg");*/
+background-position: -772px 480px;
+/* background: rgba(224, 230, 230, .6); */
+font-size: 25px;
+padding-top: 5px;
+padding-bottom: 4px;
+padding-left: 27px;
+padding-right: 26px;
+margin-right: 452px;
+border-radius: 50%;
+height: 77px;
+width: 83px;
+background: transparent;
 }
 
 .top-bar{
   border-bottom-style: solid;
   border-bottom-color: #ffffff;
   background: rgba(224, 230, 230, .6);
+}
+
+#buttontext{
+  /*-webkit-text-fill-color: transparent;*/
+  /*background: -webkit-linear-gradient(transparent, transparent), url('/images/coolsun.jpg') 772px 200px;*/
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  font-size: 28px;
+  color: white;
 }
