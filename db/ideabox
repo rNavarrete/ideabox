@@ -1,13 +1,14 @@
 ---
 ideas:
-- title: A Skateboarding App
-  description: I'm thinking of an app that lets you take pictures of cool skate spots
-    and that lets you share them with friends. It could even be like foursquare where
-    there can be a leader of a spot.
-  filename: jason.jpg
-- title: Hunter Thompson
-  description: Bad Ass
-  filename: hunter.jpg
+- title: Double or Nothing
+  description: If you spend $10 on Fast Food (or anything you want to quit) then we
+    take an extra $10 out of your credit card and send it to a charity you hate!
+  rank: 2
+  filename: nra.jpg
+- title: Who did I just give my money to?
+  description: An app that tells you who got your money. It will give you the name
+    of any billionaire you are making richer.
+  filename: trump.jpg
 - title: DOPEWallstreet
   description: Shoe prices, collection display and shoe trading.
   filename: yeezys.jpg

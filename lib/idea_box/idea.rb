@@ -24,7 +24,8 @@ class Idea
     {
       "title" => title,
       "description" => description,
-      "rank" => rank
+      "rank" => rank,
+      "filename" => filename
     }
   end
 
