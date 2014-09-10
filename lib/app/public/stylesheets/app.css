@@ -4694,7 +4694,7 @@ meta.foundation-mq-topbar {
   height: 48px;
   line-height: 45px;
   position: relative;
-  background: rgba(58, 110, 132, .7);
+  background: rgba(0, 0, 0, .6);
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -6640,8 +6640,8 @@ background: transparent;
 
 .top-bar{
   border-bottom-style: solid;
-  border-bottom-color: #ffffff;
-  background: rgba(224, 230, 230, .6);
+  border-bottom-color: #519695;
+  background: rgba(0, 0, 0, .6);
 }
 
 #buttontext{

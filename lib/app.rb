@@ -1,4 +1,4 @@
-require 'idea_box'
+require_relative './idea_box'
 require 'sinatra/assetpack'
 
 
@@ -10,14 +10,13 @@ class IdeaBoxApp < Sinatra::Base
 
 
   configure :development do
-    register Sinatra::Reloader
+    # register Sinatra::Reloader
   end
 
   get '/stylesheets/:name.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  sass(:"stylesheets/#{params[:name]}", Compass.sass_engine_options )
-end
-
+    content_type 'text/css', :charset => 'utf-8'
+    sass(:"stylesheets/#{params[:name]}", Compass.sass_engine_options )
+  end
 
   assets do
     serve '/js', from: 'js'
