@@ -30,7 +30,8 @@ end
     js :libs, [
       '/bower_components/jquery/dist/jquery.js',
       '/bower_components/foundation/js/foundation.js',
-      '/bower_components/sidr/jquery.sidr.min.js'
+      '/bower_components/sidr/jquery.sidr.min.js',
+      '/bower_components/tubular/tubular.js'
     ]
 
     js :application, [

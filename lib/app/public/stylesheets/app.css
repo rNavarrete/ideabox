@@ -6622,7 +6622,7 @@ th.hide-for-touch {
 }
 
 #submit-button{
-  border: solid #519695;
+  border: solid #ffffff;
 /*background-image: url("/images/coolsun.jpg");*/
 background-position: -772px 480px;
 /* background: rgba(224, 230, 230, .6); */
@@ -6654,26 +6654,26 @@ background: transparent;
 }
 
 #simple-menu{
-  border: solid #519695;
-/*background-image: url("/images/coolsun.jpg");*/
-background-position: -772px 480px;
-/* background: rgba(224, 230, 230, .6); */
-font-size: 25px;
-padding-top: 5px;
-padding-bottom: 4px;
-padding-left: 27px;
-padding-right: 26px;
-margin-right: 23px;
-border-radius: 50%;
-height: 77px;
-width: 83px;
-background: transparent;
+  border: solid #ffffff;
+  /*background-image: url("/images/coolsun.jpg");*/
+  background-position: -772px 480px;
+  /* background: rgba(224, 230, 230, .6); */
+  font-size: 25px;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  padding-left: 27px;
+  padding-right: 26px;
+  margin-right: 23px;
+  border-radius: 50%;
+  height: 77px;
+  width: 83px;
+  background: transparent;
 }
 
 #imagesidebar{
-margin-left: 24px;
-border-color: white;
-border: solid;
-box-shadow: 10px 10px 5px #312C2C;
-margin-bottom: 19px;
+  margin-left: 24px;
+  border-color: white;
+  border: solid;
+  box-shadow: 10px 10px 5px #312C2C;
+  margin-bottom: 19px;
 }
