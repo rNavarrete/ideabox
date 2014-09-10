@@ -49,7 +49,10 @@ end
   end
 
   post '/' do
-    IdeaStore.create(params[:idea])
+    IdeaStore.create(params[:idea], params['myfile'])
+    File.open('lib/app/public/images/' + params['myfile'][:filename], "w") do |f|
+      f.write(params['myfile'][:tempfile].read)
+    end
     redirect '/'
   end
 
@@ -67,6 +70,7 @@ end
     IdeaStore.update(id.to_i, params['idea'])
     redirect '/'
   end
+
 
   post '/:id/like' do |id|
     idea = IdeaStore.find(id.to_i)

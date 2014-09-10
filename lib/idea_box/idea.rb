@@ -1,11 +1,12 @@
 
 class Idea
   include Comparable
-  attr_reader :title, :description, :rank, :id
+  attr_reader :title, :description, :rank, :id, :filename
 
   def initialize(attributes={})
     @title       = attributes["title"]
     @description = attributes["description"]
+    @filename    = attributes["filename"]
     @rank        = attributes["rank"] || 0
     @id = attributes["id"]
 

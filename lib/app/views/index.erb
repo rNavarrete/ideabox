@@ -16,7 +16,7 @@
 
 
 
-<h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">what's on your mind?</h3>
+<h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">What's on your mind?</h3>
 <!-- <h4 class="subheader" style="color: white; font-weight: 100; text-align: center;">Share it here</h4>
  -->
 
@@ -31,11 +31,12 @@
 
 
 
-<form action="/" method="POST">
+<form action="/" method="POST" enctype='multipart/form-data'>
   <div class="row">
     <div class="large-12 columns">
       <input type="text" id="text-field" name='idea[title]' placeholder="title" style="border-radius: 25px;"/><br/><br/>
       <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;"></textarea><br/>
+      <input type='file' name='myfile'><br/>
       <div id="buttons">
       <button type="submit" class="button radius right" id="submit-button" value="save"><i id="buttontext" class="fa fa-star fa-6"></i></button>
       <a id="simple-menu" href="#sidr" class="button radius right"><i style="padding-top: 15px;"id="buttontext" class="fa fa-lightbulb-o"></i></a>
@@ -43,6 +44,28 @@
     </div>
   </div>
 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,6 +78,7 @@
     <li>
       <h3><%= idea.title %></h3> <br/>
       <p style="color:white; font-weight: 100; font-size: 18px; text-align: left;font-family: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><%= idea.description %></p>
+      <img id="imagesidebar" src="images/<%= idea.filename %>" width="200" height="100">
       <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
         <li><a><input type='submit' value="+" class="button tiny round"/><a></li>
       </form>
@@ -64,9 +88,17 @@
         <input style="" type="submit"value="delete" class="" />
       </form><li>
       <a href="/<%= idea.id %>/edit">Edit</a>
-
     </li>
   <% end %>
 </ul>
 </div>
+
+
+
+
+
+
+
+
+
 

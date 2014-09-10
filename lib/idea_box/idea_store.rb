@@ -6,7 +6,8 @@ class IdeaStore
     @database ||= YAML::Store.new('db/ideabox')
   end
 
-  def self.create(data)
+  def self.create(data, filename)
+    data["filename"] = filename[:filename]
     database.transaction do
       database['ideas'] << data
     end
