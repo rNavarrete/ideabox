@@ -79,16 +79,21 @@
       <h3><%= idea.title %></h3> <br/>
       <p style="color:white; font-weight: 100; font-size: 18px; text-align: left;font-family: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><%= idea.description %></p>
       <img id="imagesidebar" src="images/<%= idea.filename %>" width="200" height="100">
+    </li>
+
+    <div class="buttons">
       <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-        <li><a><input type='submit' value="+" class="button tiny round"/><a></li>
+        <input type='submit' value="+" class="button tiny round"/>
       </form>
 
-      <li><form action="/<%= idea.id %>" method="POST">
+      <form action="/<%= idea.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
         <input style="" type="submit"value="delete" class="" />
-      </form><li>
+      </form>
+
       <a href="/<%= idea.id %>/edit">Edit</a>
-    </li>
+    </div>
+
   <% end %>
 </ul>
 </div>
