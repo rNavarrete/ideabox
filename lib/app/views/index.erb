@@ -47,48 +47,26 @@
 
 
 
-
-
-
-
-
 <div id="sidr">
   <!-- Your content -->
+  <h2 style="font-family:'Leckerli One', cursive; font-size: 28px;padding-top: 17px;">Ideas</h2>
   <ul>
-    <li><a href="#">List 1</a></li>
-    <li class="active"><a href="#">List 2</a></li>
-    <li><a href="#">List 3</a></li>
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 style="padding-top:2000px;"> Existing Ideas </h3>
-<ul>
   <% ideas.each do |idea| %>
     <li>
+      <h3><%= idea.title %></h3> <br/>
+      <p style="color:white; font-weight: 100; font-size: 18px; text-align: left;font-family: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><%= idea.description %></p>
       <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
-        <input type='submit' value="+" class="button tiny round"/>
+        <li><a><input type='submit' value="+" class="button tiny round"/><a></li>
       </form>
-      <%= idea.title %> (<%= idea.id %>) <br/>
-      <%= idea.description %>
-      <a href="/<%= idea.id %>/edit">Edit</a>
-      <form action="/<%= idea.id %>" method="POST">
+
+      <li><form action="/<%= idea.id %>" method="POST">
         <input type="hidden" name="_method" value="DELETE">
-        <input type="submit"value="delete" class="button alert tiny round" />
-      </form>
+        <input style="" type="submit"value="delete" class="" />
+      </form><li>
+      <a href="/<%= idea.id %>/edit">Edit</a>
+
     </li>
   <% end %>
 </ul>
+</div>
+

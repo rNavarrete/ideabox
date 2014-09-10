@@ -55,7 +55,7 @@ end
 
   delete '/:id' do |id|
     IdeaStore.delete(id.to_i)
-    redirect '/'
+    redirect '/#sidr'
   end
 
   get '/:id/edit' do |id|

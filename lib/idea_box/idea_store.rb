@@ -12,6 +12,12 @@ class IdeaStore
     end
   end
 
+  def self.delete(position)
+    database.transaction do
+      database['ideas'].delete_at(position)
+    end
+  end
+
   def self.all
     ideas = []
     raw_ideas.each_with_index do |data, i|
