@@ -3,15 +3,29 @@ require_relative 'idea'
 require 'pry'
 
 class IdeaStore
-  def self.database
-    @database ||= YAML::Store.new('db/ideabox')
+  attr_reader :database
+  def initialize(filepath)
+    @database = YAML::Store.new(filepath)
   end
+
+  def create(data, filedata)
+    data["filename"] = filedata[:filename] if filedata
+    database.transaction do
+      database['ideas'] << data
+    end
+  end
+
+  # below be class methods
 
   def self.create(data, filedata)
     data["filename"] = filedata[:filename] if filedata
     database.transaction do
       database['ideas'] << data
     end
+  end
+
+  def self.database
+    @database ||= YAML::Store.new('db/ideabox')
   end
 
   def self.delete(position)

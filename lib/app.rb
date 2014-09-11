@@ -66,9 +66,14 @@ class IdeaBoxApp < Sinatra::Base
     erb :search_results, locals: {results: results}
   end
 
+  def idea_store
+    # ENV['RACK_ENV'] # returns 'development' or 'test' or 'production'
+    IdeaStore.new('db/ideabox')
+  end
+
   post '/' do
     filedata = params['myfile']
-    IdeaStore.create(params[:idea], filedata)
+    idea_store.create(params[:idea], filedata)
     if filedata
       File.open('lib/app/public/images/' + params['myfile'][:filename], "w") do |f|
         f.write(params['myfile'][:tempfile].read)
