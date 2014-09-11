@@ -1,30 +1,37 @@
 ---
 ideas:
 - title: Double or Nothing
-  description: If you spend $10 on Fast Food (or anything you want to quit) then we
-    take an extra $10 out of your credit card and send it to a charity you hate!
-  rank: 2
+  description: " An app where If you spend $10 on Fast Food (or anything you want
+    to quit) then we take an extra $10 out of your credit card and send it to a charity
+    you hate!"
   filename: nra.jpg
 - title: Who did I just give my money to?
   description: An app that tells you who got your money. It will give you the name
     of any billionaire you are making richer and fatter.
   filename: trump.jpg
 - title: DOPEWallstreet
-  description: Shoe prices, collection display and shoe trading.
+  description: A website that shows shoe prices, you can display your collection and
+    you can trade shoes with members.
   filename: yeezys.jpg
 - title: Easy one for one
   description: A company that handles all the logistics involved when a startup implements
     a 1 for 1 element to their company.
   filename: One-for-One-Overview_hero.jpg
 - title: Hidden Gems
-  description: 'A website where users can discover and share great songs by artists
-    that were never "hit singles". #music '
+  description: A website where users can discover and share great songs by artists
+    that were never hit singles
   filename: illmatic.jpg
 - title: Coming Soon
-  description: You upload a fake trailer for the movie you want to make and based
-    on that trailer people can fund your film.
+  description: A website where you upload a fake trailer for the movie you want to
+    make and based on that trailer people can fund your film.
   filename: clerks.jpg
 - title: Reverse Kickstarter
-  description: 'Where fans put up money so that their favorite creators make stuff.
-    #company'
+  description: 'A website where fans put up money so that their favorite creators
+    make stuff. '
   filename: kickstarter.jpg
+- title: High School Agency
+  description: A company of managers/agents for high school students.
+  filename: agent.jpg
+- title: Github for hip hop
+  description: A website where users can collaborate on hip hop beats
+  filename: mpc.jpg
