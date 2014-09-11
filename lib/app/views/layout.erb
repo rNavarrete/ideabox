@@ -5,13 +5,31 @@
     <meta charset="utf-8">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="javascripts/sidr/stylesheets/jquery.sidr.dark.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IdeaBox</title>
     <link rel="stylesheet" href="/stylesheets/app.css"/>
     <%= js :modernizr %>
   </head>
   <body>
+
+
+    <div id="wrapper">
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #519695;">idea box</a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+    </nav>
+
+
+
+
+
+
+
     <%= yield %>
     <%= js :libs %>
     <%= js :application %>
@@ -31,6 +49,6 @@
   });
     </script>
 
-
+  </div>
   </body>
 </html>
