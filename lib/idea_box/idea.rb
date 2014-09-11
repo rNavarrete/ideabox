@@ -1,4 +1,3 @@
-
 class Idea
   include Comparable
   attr_reader :title, :description, :rank, :id, :filename
@@ -8,24 +7,19 @@ class Idea
     @description = attributes["description"]
     @filename    = attributes["filename"]
     @rank        = attributes["rank"] || 0
-    @id = attributes["id"]
-
-  end
-
-  def save
-    IdeaStore.create(to_h)
+    @id          = attributes["id"]
   end
 
   def <=>(other)
-    other.rank <=> rank
+    rank <=> other.rank
   end
 
   def to_h
-    {
-      "title" => title,
+    { "id"          => id,
+      "title"       => title,
       "description" => description,
-      "rank" => rank,
-      "filename" => filename
+      "rank"        => rank,
+      "filename"    => filename
     }
   end
 
