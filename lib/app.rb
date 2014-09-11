@@ -1,5 +1,6 @@
 require_relative './idea_box'
 require 'sinatra/assetpack'
+require 'pry'
 
 
 class IdeaBoxApp < Sinatra::Base
@@ -30,7 +31,8 @@ class IdeaBoxApp < Sinatra::Base
       '/bower_components/jquery/dist/jquery.js',
       '/bower_components/foundation/js/foundation.js',
       '/bower_components/sidr/jquery.sidr.min.js',
-      '/bower_components/tubular/tubular.js'
+      '/bower_components/tubular/tubular.js',
+      '/bower_components/mosaiqy/mosaiqy-1.0.2.min.js'
     ]
 
     js :application, [
@@ -46,6 +48,19 @@ class IdeaBoxApp < Sinatra::Base
 
   not_found do
     erb :error
+  end
+
+  get '/search' do
+    query   = params["query"].split(" ")
+    results = []
+    IdeaStore.all.select do |idea|
+      query.each do |search_word|
+        if idea.description.downcase =~ /#{search_word}/ || idea.title.downcase =~ /#{search_word}/
+          results << idea
+        end
+      end
+    end
+    erb :search_results, locals: {results: results}
   end
 
   post '/' do
