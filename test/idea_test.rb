@@ -1,7 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require 'minitest/spec'
-require_relative '../lib/idea_box/idea'
+require_relative 'test_helper'
 
 describe Idea do
   def title()       'some title'       end
