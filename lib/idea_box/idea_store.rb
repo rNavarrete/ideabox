@@ -60,6 +60,5 @@ class IdeaStore
     database.transaction do
       database['ideas'][id] = data
     end
-    binding.pry
   end
 end

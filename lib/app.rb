@@ -51,8 +51,8 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/search' do
-    query   = params["query"].split(" ")
     results = []
+    query   = params["query"].split(" ").uniq
     IdeaStore.all.select do |idea|
       query.each do |search_word|
         if idea.description.downcase =~ /#{search_word}/ || idea.title.downcase =~ /#{search_word}/
