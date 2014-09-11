@@ -10,7 +10,7 @@ class IdeaBoxApp < Sinatra::Base
 
 
   configure :development do
-    # register Sinatra::Reloader
+    register Sinatra::Reloader
   end
 
   get '/stylesheets/:name.css' do
