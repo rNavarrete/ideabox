@@ -1,23 +1,33 @@
+ <div id="wrapper">
+ <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #519695;">idea box</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+</nav>
 
 
 
-
-  <form action='/<%= idea.id %>' method='POST'>
-    <div class="row">
-      <div class="large-12 columns">
-        <p>
-          <% if idea.id %>
-            Edit your Idea:
-          <% else %>
-            Your Idea:
-          <% end %>
-        </p>
+<form action='/<%= idea.id %>' method='POST'>
+  <div class="row">
+    <div class="large-12 columns">
+      <p>
         <% if idea.id %>
-          <input type="hidden" name="_method" value="PUT" />
+        <h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">Edit</h3>          <% else %>
+        Your Idea:
         <% end %>
-        <input type='text' name='idea[title]' value="<%= idea.title %>"/><br/>
-        <textarea name='idea[description]'><%= idea.description %></textarea><br/>
-        <input type='submit'/>
-      </div>
+      </p>
+      <% if idea.id %>
+      <input type="hidden" name="_method" value="PUT" />
+      <% end %>
+      <input type='text' id="text-field" name='idea[title]' value="<%= idea.title %>"/><br/>
+      <textarea id="text-description" name='idea[description]'><%= idea.description %></textarea><br/>
+      <input type='file' name='myfile' class="custom-file-input"><br/>
+      <input type='submit'/>
     </div>
-  </form>
+  </div>
+</form>
+</div>

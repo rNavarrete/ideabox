@@ -1,5 +1,6 @@
 require 'yaml/store'
 require_relative 'idea'
+require 'pry'
 
 class IdeaStore
   def self.database
@@ -54,9 +55,11 @@ class IdeaStore
     end
   end
 
-  def self.update(id, data)
+  def self.update(id, data, filename)
+    data["filename"] = filename
     database.transaction do
       database['ideas'][id] = data
     end
+    binding.pry
   end
 end

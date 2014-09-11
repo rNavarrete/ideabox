@@ -1,10 +1,16 @@
-
-
+<div id="wrapper">
+ <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #519695;">idea box</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+</nav>
 
 
 <h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">What's on your mind?</h3>
-<!-- <h4 class="subheader" style="color: white; font-weight: 100; text-align: center;">Share it here</h4>
- -->
 
 
 
@@ -17,9 +23,9 @@
       <input type="text" id="text-field" name='idea[title]' placeholder="title" style="border-radius: 25px;"/><br/><br/>
       <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;" rows="4"></textarea><br/>
       <div id="buttons">
-      <input type='file' name='myfile' class="custom-file-input"><br/>
-      <button type="submit" class="button radius right" id="submit-button" value="save"><i id="buttontext" class="fa fa-check"></i></button>
-      <a id="simple-menu" href="#sidr" class="button radius right"><i style="padding-top: 15px;"id="buttontext" class="fa fa-lightbulb-o"></i></a>
+        <input type='file' name='myfile' class="custom-file-input"><br/>
+        <button type="submit" class="button radius right" id="submit-button" value="save"><i id="buttontext" class="fa fa-check"></i></button>
+        <a id="simple-menu" href="#sidr" class="button radius right"><i style="padding-top: 15px;"id="buttontext" class="fa fa-lightbulb-o"></i></a>
       </div>
     </div>
   </div>
@@ -39,28 +45,28 @@
   <!-- Your content -->
   <h2 style="font-family:'Leckerli One', cursive; font-size: 28px;padding-top: 17px;">Ideas</h2>
   <ul>
-  <% ideas.each do |idea| %>
+    <% ideas.each do |idea| %>
     <li>
       <h3><%= idea.title %></h3> <br/>
       <p style="color:white; font-weight: 100; font-size: 18px; text-align: left;font-family: Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;"><%= idea.description %></p>
       <img id="imagesidebar" src="images/<%= idea.filename %>" width="200" height="100">
 
-    <div class="buttons">
-      <form action='/<%= idea.id %>/like' method='POST' style="display: inline; bottom: 9px;">
-        <button style="bottom: 9px; padding-right: 36px; background: transparent; border: solid 2px" type='submit' value="Like" class="button tiny round"/><i style="padding-left: 12px; text-align: center;" class="fa fa-star"></i></button>
-      </form>
+      <div class="buttons">
+        <form action='/<%= idea.id %>/like' method='POST' style="display: inline; bottom: 9px;">
+          <button style="bottom: 9px; padding-right: 36px; background: transparent; border: solid 2px" type='submit' value="Like" class="button tiny round"/><i style="padding-left: 12px; text-align: center;" class="fa fa-star"></i></button>
+        </form>
 
-      <form action="/<%= idea.id %>" method="POST" style="margin-left: 0px; margin-right: 9px;">
-        <input type="hidden" name="_method" value="DELETE">
-        <input style="margin-bottom: 19px; margin-top: 10px; bottom: 9px; padding-left: 20px; border: solid 2px rgb(139, 3, 3); background: transparent; color: white; padding-bottom: 9px;" type="submit" value="delete" class="button tiny round" />
-      </form>
+        <form action="/<%= idea.id %>" method="POST" style="margin-left: 0px; margin-right: 9px;">
+          <input type="hidden" name="_method" value="DELETE">
+          <input style="margin-bottom: 19px; margin-top: 10px; bottom: 9px; padding-left: 20px; border: solid 2px rgb(139, 3, 3); background: transparent; color: white; padding-bottom: 9px;" type="submit" value="delete" class="button tiny round" />
+        </form>
 
-      <a href="/<%= idea.id %>/edit" style="padding-top: 10px; margin-top: 1px; padding-left: 20px; border-radius: 60px; width: 68px; height: 33px; border: solid 2px #ffffff; background: transparent;;" class="button tiny round">Edit</a>
-    </div>
-   </li>
+        <a href="/<%= idea.id %>/edit" style="padding-top: 10px; margin-top: 1px; padding-left: 20px; border-radius: 60px; width: 68px; height: 33px; border: solid 2px #ffffff; background: transparent;;" class="button tiny round">Edit</a>
+      </div>
+    </li>
 
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
 </div>
 
 
@@ -68,7 +74,6 @@
 
 
 </div>
-
 
 
 

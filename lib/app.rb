@@ -67,7 +67,7 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   put '/:id' do |id|
-    IdeaStore.update(id.to_i, params['idea'])
+    IdeaStore.update(id.to_i, params['idea'], params['myfile'])
     redirect '/'
   end
 

@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" >
-  <head>
-    <meta charset="utf-8">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdeaBox</title>
-    <link rel="stylesheet" href="/stylesheets/app.css"/>
-    <%= js :modernizr %>
-  </head>
-  <body>
-
-
-    <div id="wrapper">
-    <nav class="top-bar" data-topbar role="navigation">
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #519695;">idea box</a></h1>
-        </li>
-        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-    </nav>
-
-
-
-
-
-
+<head>
+  <meta charset="utf-8">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdeaBox</title>
+  <link rel="stylesheet" href="/stylesheets/app.css"/>
+  <%= js :modernizr %>
+</head>
+<body>
 
     <%= yield %>
     <%= js :libs %>
     <%= js :application %>
 
     <script>
-      $(document).ready(function() {
-        $('#simple-menu').sidr();
-      });
+    $(document).ready(function() {
+      $('#simple-menu').sidr();
+    });
     </script>
 
+
+
+    <% if params == {} %>
     <script>
-     $('document').ready(function() {
+      $('document').ready(function() {
        var options = { videoId: 'e4Is32W-ppk?rel=0&amp;vq=hd1080', start: 3 };
        $('#wrapper').tubular(options);
-       // f-UGhWj1xww cool sepia hd
-      // 49SKbS7Xwf4 beautiful barn sepia
-  });
+      });
     </script>
-
-  </div>
-  </body>
+    <% else %>
+      <script>
+        $('document').ready(function() {
+         var options = { videoId: 'ab0TSkLe-E0', start: 7};
+         $('#wrapper').tubular(options);
+        });
+      </script>
+    <% end %>
+</body>
 </html>
