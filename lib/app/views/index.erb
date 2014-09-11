@@ -1,39 +1,13 @@
 <div id="wrapper">
- <nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="has-form">
-      <form action="/search" method="get" enctype='multipart/form-data'>
-        <div class="large-2 small-2 columns">
-          <input type="text" placeholder="Search" style="margin-top: 9px" name="query">
-        </div>
-      </form>
-      <li class="name">
-        <h1><a href="/" style="font-family:'Leckerli One', cursive; margin-left: 139px;text-shadow: 2px 2px #519695;">idea box</a></h1>
-      </ul>
-    </nav>
-
-
-<h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">What's on your mind?</h3>
+  <%= erb :navbar %>
+  <h3 style="color:white; font-weight: 100; font-size: -webkit-xxx-large; text-align: center; padding-top: 94px">What's on your mind?</h3>
 
 
 
 
 
 
-<form action="/" method="POST" enctype='multipart/form-data'>
-  <div class="row">
-    <div class="large-12 columns">
-      <input type="text" id="text-field" name='idea[title]' placeholder="title" style="border-radius: 25px;"/><br/><br/>
-      <textarea id="text-description" name='idea[description]' placeholder="description" style="border-radius: 25px;" rows="4"></textarea><br/>
-      <div id="buttons">
-        <input type='file' name='myfile' class="custom-file-input"><br/>
-        <button type="submit" class="button radius right" id="submit-button" value="save"><i id="buttontext" class="fa fa-check"></i></button>
-        <a id="simple-menu" href="#sidr" class="button radius right"><i style="padding-top: 15px;"id="buttontext" class="fa fa-lightbulb-o"></i></a>
-      </div>
-    </div>
-  </div>
-</form>
-
+<%= erb :idea_form %>
 
 
 
