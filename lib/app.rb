@@ -101,7 +101,7 @@ class IdeaBoxApp < Sinatra::Base
   post '/:id/like' do |id|
     idea = IdeaStore.find(id.to_i)
     idea.like!
-    IdeaStore.update(id.to_i, idea.to_h)
+    IdeaStore.update(id.to_i, idea.to_h, idea.filename)
     redirect '/'
   end
 end

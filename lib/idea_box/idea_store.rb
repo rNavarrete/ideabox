@@ -69,7 +69,7 @@ class IdeaStore
     end
   end
 
-  def self.update(id, data, filename)
+  def self.update(id, data, filename=nil)
     data["filename"] = filename
     database.transaction do
       database['ideas'][id] = data
