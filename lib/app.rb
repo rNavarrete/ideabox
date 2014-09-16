@@ -43,7 +43,10 @@ class IdeaBoxApp < Sinatra::Base
   end
 
   get '/' do
-    erb :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
+    erb :index, locals: {
+      ideas: IdeaStore.all.sort,
+      idea:  Idea.new(params)
+    }
   end
 
   not_found do
@@ -63,10 +66,18 @@ class IdeaBoxApp < Sinatra::Base
     erb :search_results, locals: {results: results}
   end
 
+  def idea_store
+    # ENV['RACK_ENV'] # returns 'development' or 'test' or 'production'
+    IdeaStore.new('db/ideabox')
+  end
+
   post '/' do
-    IdeaStore.create(params[:idea], params['myfile'])
-    File.open('lib/app/public/images/' + params['myfile'][:filename], "w") do |f|
-      f.write(params['myfile'][:tempfile].read)
+    filedata = params['myfile']
+    idea_store.create(params[:idea], filedata)
+    if filedata
+      File.open('lib/app/public/images/' + params['myfile'][:filename], "w") do |f|
+        f.write(params['myfile'][:tempfile].read)
+      end
     end
     redirect '/'
   end
