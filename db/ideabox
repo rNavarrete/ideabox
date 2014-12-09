@@ -15,11 +15,9 @@ ideas:
   description: A website where users can discover and share great songs by artists
     that were never hit singles
   filename: illmatic.jpg
-- id: 3
-  title: Coming Soon
+- title: Coming Soon
   description: A website where you upload a fake trailer for the movie you want to
-    make and based on that trailer people can fund your film.
-  rank: 2
+    make and based on that trailer people can fund your film. A film by Kevin Smith
   filename: clerks.jpg
 - title: Reverse Kickstarter
   description: 'A website where fans put up money so that their favorite creators
@@ -43,3 +41,6 @@ ideas:
   description: A site where you can share your shoe collection with others, trade,
     and track prices.
   filename: yeezys.jpg
+- title: start a coding school
+  description: call it turing 2
+  filename: jorge.jpg
